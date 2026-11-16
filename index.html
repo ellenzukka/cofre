@@ -1,0 +1,315 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Last Code | Umbrella Corporation</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Roboto+Condensed:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <main class="game-container">
+
+        <header class="top-bar">
+
+            <div class="brand">
+                <div class="brand-symbol">U</div>
+
+                <div>
+                    <h2>UMBRELLA CORPORATION</h2>
+                    <p>BIOTECHNOLOGY DIVISION</p>
+                </div>
+            </div>
+
+            <div class="system-status">
+                <span class="status-light"></span>
+                SYSTEM ONLINE
+            </div>
+
+        </header>
+
+
+        <section class="main-content">
+
+            <div class="file-info">
+                <span>SECURITY TERMINAL 07</span>
+                <span>CLASSIFIED DOCUMENT</span>
+            </div>
+
+
+            <div class="title-area">
+                <p class="small-title">RESTRICTED ACCESS</p>
+                <h1>THE LAST CODE</h1>
+                <p class="subtitle">PROTOCOLO DE AUTENTICAÇÃO</p>
+            </div>
+
+
+            <!-- COFRE CONSTRUÍDO INTEIRAMENTE COM CSS -->
+
+            <section class="vault-area">
+
+                <div class="vault-scene">
+
+                    <!-- INTERIOR DO COFRE -->
+
+                    <div class="vault-interior">
+
+                        <div class="interior-light"></div>
+
+                        <div class="interior-content">
+                            <div class="interior-label">
+                                UMBRELLA
+                            </div>
+
+                            <div class="interior-emblem">U</div>
+
+                            <div class="interior-shelf"></div>
+
+                            <div class="classified-file">
+                                <span>CLASSIFIED</span>
+                                <strong>PROJECT 07</strong>
+                                <small>TOP SECRET</small>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- PORTA DO COFRE -->
+
+                    <div class="vault-door" id="vault-door">
+
+                        <div class="door-face">
+
+                            <div class="door-outer-ring"></div>
+                            <div class="door-middle-ring"></div>
+                            <div class="door-inner-ring"></div>
+
+                            <div class="door-bolts">
+                                <span class="bolt bolt-1"></span>
+                                <span class="bolt bolt-2"></span>
+                                <span class="bolt bolt-3"></span>
+                                <span class="bolt bolt-4"></span>
+                                <span class="bolt bolt-5"></span>
+                                <span class="bolt bolt-6"></span>
+                                <span class="bolt bolt-7"></span>
+                                <span class="bolt bolt-8"></span>
+                            </div>
+
+                            <div class="door-center">
+
+                                <div class="door-center-ring">
+
+                                    <div class="gear gear-outer"></div>
+
+                                    <div class="lock-core">
+
+                                        <div class="lock-screen">
+                                            <span id="lock-display">07</span>
+                                        </div>
+
+                                        <div class="lock-handle">
+                                            <div class="handle-bar"></div>
+                                            <div class="handle-center"></div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="door-bottom-label">
+                                UMBRELLA SECURITY SYSTEM
+                            </div>
+
+                            <div class="door-warning">
+                                <span></span>
+                                AUTHORIZED ACCESS ONLY
+                            </div>
+
+                        </div>
+
+                        <div class="door-side"></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="vault-label" id="vault-label">
+                    <span class="red-light"></span>
+                    SECURITY LOCK ENGAGED
+                </div>
+
+            </section>
+
+
+            <!-- TERMINAL -->
+
+            <section class="terminal">
+
+                <div class="terminal-header">
+                    <span>ACCESS PANEL</span>
+                    <span>ENCRYPTION: ACTIVE</span>
+                </div>
+
+                <div class="terminal-content">
+
+                    <p class="instruction">
+                        Acesso restrito. Insira o código numérico
+                        para desbloquear o arquivo confidencial.
+                    </p>
+
+                    <label for="password">
+                        SECURITY PASSWORD [01 - 50]
+                    </label>
+
+                    <div class="input-area">
+
+                        <input
+                            type="number"
+                            id="password"
+                            min="1"
+                            max="50"
+                            placeholder="??"
+                            autocomplete="off"
+                        >
+
+                        <button id="check-button">
+                            AUTENTICAR
+                        </button>
+
+                    </div>
+
+                    <p id="message" class="message">
+                        AGUARDANDO AUTENTICAÇÃO...
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- HISTÓRICO -->
+
+            <section class="history">
+
+                <div class="history-header">
+                    <span>TERMINAL LOG</span>
+
+                    <span>
+                        ATTEMPTS:
+                        <strong id="attempts">00</strong>/07
+                    </span>
+                </div>
+
+                <div id="history-list">
+
+                    <p class="log-entry">
+                        <span>[SYSTEM]</span>
+                        Terminal inicializado.
+                    </p>
+
+                    <p class="log-entry">
+                        <span>[SYSTEM]</span>
+                        Aguardando código de acesso...
+                    </p>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+        <footer class="footer">
+            <span>UMBRELLA CORP. © 1998</span>
+            <span>AUTHORIZED PERSONNEL ONLY</span>
+        </footer>
+
+
+        <!-- TELA DE VITÓRIA -->
+
+        <div id="overview" class="overview">
+
+            <div class="result-box success-box">
+
+                <div class="result-icon">✓</div>
+
+                <p class="result-label">
+                    AUTHENTICATION COMPLETE
+                </p>
+
+                <h2>COFRE DESBLOQUEADO!</h2>
+
+                <p>
+                    Código confirmado. Acesso ao arquivo
+                    confidencial autorizado.
+                </p>
+
+                <div class="file-unlocked">
+                    <span>PARABEEENS!!!</span>
+                    <strong>cofrinho</strong>
+                    <span>STATUS: DECRYPTED</span>
+                </div>
+
+                <button id="restart-button">
+                    REINICIAR SISTEMA
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- TELA DE BLOQUEIO -->
+
+        <div id="lockout" class="overview">
+
+            <div class="result-box failure-box">
+
+                <div class="result-icon">!</div>
+
+                <p class="result-label">
+                    SECURITY BREACH DETECTED
+                </p>
+
+                <h2>ACESSO BLOQUEADO!</h2>
+
+                <p>
+                    Limite máximo de tentativas atingido.
+                    O sistema bloqueou esta sessão.
+                </p>
+
+                <div class="file-unlocked">
+                    <span>SECURITY STATUS</span>
+                    <strong>ACCESS DENIED</strong>
+                    <span>ATTEMPTS: 07 / 07</span>
+                </div>
+
+                <button id="lockout-restart">
+                    REINICIAR SISTEMA
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
